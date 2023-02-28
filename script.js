@@ -1,5 +1,5 @@
 /* SENARYO-1 */
-//console.log("SENARYO-1");
+console.log("SENARYO-1");
 let n = 11;
 const middle = Math.ceil(n / 2);
 
@@ -30,18 +30,22 @@ console.log("SENARYO-2");
 let x = parseInt(prompt("Bir sayı giriniz:"));
 let row = "";
 
-for (let i = 0; i <= x; i++) {
-  for (let j = 0; j < x - i; j++) {
-    row += " ";
+if(x > 3) {
+  for (let i = 0; i <= x; i++) {
+    for (let j = 0; j < x - i; j++) {
+      row += " ";
+    }
+  
+    for (let j = 0; j <= i; j++) {
+      row += "*";
+    }
+    if ((i + 1) % 3 === 0) {
+      row = row.slice(0, -3);
+      row += "REA";
+    }
+    row += "\n";
   }
-
-  for (let j = 0; j <= i; j++) {
-    row += "*";
-  }
-  if ((i + 1) % 3 === 0) {
-    row = row.slice(0, -3);
-    row += "REA";
-  }
-  row += "\n";
+  console.log(row);
+} else{
+  alert("Lütfen 3'ten büyük bir sayı giriniz.")
 }
-console.log(row);
