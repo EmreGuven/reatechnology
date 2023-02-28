@@ -1,0 +1,25 @@
+Daha önce hiç bir frontend projesinin, backend/restApi projesi ile haberleşmesini
+sağladınız mı? Buna bağlı olarak restful api projenizden dışarıya açtığınız datanın
+güvenliğini sağlamak için aklınıza gelen ilk yöntem hangisidir?
+
+- Evet, github profilimde de publish olarak paylaştığım projelerim var. Verilerin güvenliğini sağlamak için API şifreleme HTTPS kullanılır.
+Bearer yöntemi ve token oluşturmak için JWT kullandım. Bu sayede API yi kullanmak isteyen kullanıcılara istediğimiz gibi erişim kısıtlaması veya izni verebiliriz.
+
+Daha önce çalıştığınız projelerde OOP prensiplerine uygun geliştirme yaptınız mı? Buna bağlı olarak; Birkaç programlama dili hariç, bir nesnenin yalnızca bir adet nesneden doğrudan miras alabildiğini göz önünde bulundurduğunuzda, kod tekrarından kaçınmak için nesnelerinize vereceğiniz ortak özellikleri ve methodları nerede tutmayı ve nasıl aktarmayı tercih edersiniz?
+
+- Evet, OOP prensiplerine uygun geliştirmeler yaptım. Bu tarz durumlarda kod tekrarından kaçınmak için ortak özellikleri ve methodları base class da tanımlamayı seçerim. Böylelikle alt sınıflar bu özellik ve methodları miras alarak kullanabilir.
+
+Mobil uyumlu bir web uygulaması üzerinde tasarlayacağınız sayfanın veya modülün farklı cihazlarda (mobil,tablet) responsive davranmasını sağlamak için nelere dikkat edersiniz?
+
+- CSS flex veya grid , bootstrap vb. gibi yöntemler kullanarak responsive davranmasını sağlayabiliriz.
+Dikkat edilmesi gereken konular ;
+  Sayfalar küçüldükçe değişebilir ve yerleştirilebilir olmalıdır.
+  Kullanılan resimler mobil cihazlardaki bellek kullanımı göz önünde bulundurularak seçilmelidir.Çünkü resimlerin yüklenme hızından dolayı kullanıcı deneyimi açısından önemlidir.
+  Mobil cihazlarda ekran küçük olduğu için menülerin dropdown olarak tasarlanması erişilebilirlik açısından çok önemlidir.
+  Buton ve form ların yer değişebilir , büyüyüp küçülebilir olması gerekir.
+
+Ayrı veritabanı teknolojilerindeki syntax farklılıklarına takılmadan, Products tablosundan 100 adet veriyi id'leri büyükten küçüğe sıralanmış şekilde getirecek bir query yazabilir misiniz? Filtrelemek için kullanılacak sütun ismi "product_id".
+
+- SELECT * FROM Products
+  ORDER BY product_id DESC
+  LIMIT 100
